@@ -41,10 +41,6 @@ MainSection:NewButton("Base Battles script", "Base Battles script", function()
     loadstring(game:HttpGet(("https://pastebin.com/raw/hQ8cDCaM"),true))()
 end)
 
-MainSection:NewButton("inf yield ", "inf yield", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
 MainSection:NewButton("Build a boat for treasure", " build a boat for treasure", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
 end)
@@ -56,3 +52,38 @@ end)
 MainSection:NewButton("Ohio", " swag like ohio" , function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/rxn-xyz/Ohio./main/Ohio.lua",true))()
 end)
+
+--LOCAL PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("THIS MAY GET YOU BANNED USE AT YOUR OWN RISK ☢")
+
+
+PlayerSection:NewToggle("superhuman", "run faster and jump", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+PlayerSection:NewSlider("WalkSpeed", "zoooom", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "weeeee", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+--misc
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Misc")
+
+MiscSection:NewButton("inf yield ", "inf yield", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+--credits
+local Credits = Window:NewTab("Credits")
+local Credits = Credits:NewSection("nobody idek why i added this")
