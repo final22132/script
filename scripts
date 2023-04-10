@@ -6,6 +6,6 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
 
-MainSection:NewButton("Main script", "the main script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+MainSection:NewButton("Doors script", "doors script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/doors%20script?token=GHSAT0AAAAAACBHGSRVTNVHJ46C7RPLKG7WZBUG2JQ'))()
 end)
