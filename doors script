@@ -1,0 +1,262 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("lafi", "DarkTheme")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Main script", "the main script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+end)
+
+MainSection:NewButton("Free vitamin", "gives you vitamin", function()
+    getgenv().CustomVitamins = {
+        SpeedBoost = 7,
+        EffectDuration = 7.5
+    }
+    
+    local tool = game:GetObjects("rbxassetid://12827538877")[1]
+    tool.Parent = game.Players.LocalPlayer.Backpack
+    
+    local anim = Instance.new("Animation")
+    anim.Name = "idle"
+    anim.AnimationId = "rbxassetid://10479585177"
+    local idle = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim)
+    
+    local anim = Instance.new("Animation")
+    anim.Name = "open"
+    anim.AnimationId = "rbxassetid://10482563149"
+    local use = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(anim)
+    
+    tool.Equipped:Connect(function()
+        idle:Play()
+    end)
+    
+    tool.Unequipped:Connect(function()
+        idle:Stop()
+    end)
+    
+    local using = false
+    tool.Activated:Connect(function()
+        if using == false then
+            using = true
+            use:Play()
+            tool.Handle.sound_open:Play()
+            task.wait(0.5)
+            using = false
+            tool:Destroy()
+            use:Stop()
+            local OldSpeedBoost = game.Players.LocalPlayer.Character.Humanoid:GetAttribute("SpeedBoost")
+            game.Players.LocalPlayer.Character.Humanoid:SetAttribute("SpeedBoost", getgenv().CustomVitamins.SpeedBoost + OldSpeedBoost)
+            task.wait(getgenv().CustomVitamins.EffectDuration)
+            game.Players.LocalPlayer.Character.Humanoid:SetAttribute("SpeedBoost", OldSpeedBoost)
+        end
+    end)
+end)
+
+MainSection:NewButton("client sided Crucifix press Q + click", "Q+click", function()
+    _G.Uses = 1000
+_G.Range = 3000
+_G.OnAnything = true
+_G.Fail = false
+loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+end)
+
+
+MainSection:NewButton("inf yield", "just normal inf yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("noclip press R", "noclip", function()
+    -- Made by Deivid#5444
+
+_G.Keybind = "R"
+_G.ClipGui = true
+_G.IncludeNoclip = true
+
+local isEnabled = false
+
+local UIS = game:GetService("UserInputService")
+
+local Plr = game.Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+ScreenGui.Enabled = _G.ClipGui or false
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = ScreenGui
+
+TextLabel.AnchorPoint = Vector2.new(1, 0)
+TextLabel.Position = UDim2.new(1, -5, 0, 0)
+TextLabel.Text = "Noclip + Bypasser: Off"
+TextLabel.Size = UDim2.new(0,200,0,75)
+TextLabel.TextScaled = true
+TextLabel.TextStrokeColor3 = Color3.new(1,1,1)
+TextLabel.TextStrokeTransparency = 0
+TextLabel.BackgroundTransparency = 1
+
+function getValue()
+    local value
+    if isEnabled then
+        value = "On"
+    else
+        value = "Off"
+    end
+    return value
+end
+
+UIS.InputBegan:Connect(function(input, gp)
+    if gp then return end
+
+    if input.KeyCode == Enum.KeyCode[_G.Keybind] then
+        isEnabled = not isEnabled
+        task.wait()
+        TextLabel.Text = "Noclip + Bypasser: " .. getValue()
+    end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if not Char:FindFirstChild("HumanoidRootPart") then return end
+    if _G.IncludeNoclip then
+        Char.HumanoidRootPart.CanCollide = not isEnabled
+        Char.Collision.CanCollide = not isEnabled
+    end
+
+    local HrpCFrame = Char.HumanoidRootPart.CFrame
+
+    local ray = Ray.new(HrpCFrame.Position, HrpCFrame.LookVector * 0.5)
+    local part = workspace:FindPartOnRay(ray)
+    if part and part.CanCollide == true and isEnabled then
+        Char.HumanoidRootPart.Anchored = true
+end
+end)
+end)
+
+
+MainSection:NewButton("client sided shears", "its client", function()
+    local Tool = game:GetObjects("rbxassetid://12685165702")[1]
+local Humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+local Sound = Instance.new("Sound")
+
+Tool.Parent = game.Players.LocalPlayer.Backpack
+
+Sound.PlaybackSpeed = 1.25
+Sound.SoundId = "rbxassetid://9118823101"
+Sound.Parent = Tool
+
+Tool.Activated:Connect(function()
+    local Use = Tool.Animations.use
+    local UseTrack = Humanoid:LoadAnimation(Use)
+
+    UseTrack:Play()
+    Sound:Play()
+    wait(0.25)
+    Sound:Play()
+    game:GetService("Players").LocalPlayer:GetMouse().Target:FindFirstAncestorOfClass("Model"):Destroy()
+end)
+
+Tool.Equipped:Connect(function()
+    local Idle = Tool.Animations.idle
+    local IdleTrack = Humanoid:LoadAnimation(Idle)
+
+    IdleTrack:Play()
+end)
+Tool.Unequipped:Connect(function()
+    for _,anim in pairs(Humanoid.Animator:GetPlayingAnimationTracks()) do
+        anim:Stop()
+    end
+end)
+end)
+
+
+MainSection:NewButton("gun script", "doesnt actuall work", function()
+    local Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))()
+local CustomShop = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Shop%20Items/Source.lua"))()
+local UIS = game:GetService("UserInputService")
+local exampleTool = LoadCustomInstance("rbxassetid://12848567274") -- wand model
+
+if game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Visible == true then
+    -- Create custom shop item
+    CustomShop.CreateItem(exampleTool, {
+        Title = "Harry Potter Wand",
+        Desc = "Works on entities",
+        Image = "https://cdn.discordapp.com/attachments/1049016956231102465/1078727375631679688/image_2023-02-24_121721211-removebg-preview.png",
+        Price = "gun",
+        Stack = 1,
+    })
+    ----------------------------------------- parenting
+else
+    exampleTool.Parent = game.Players.LocalPlayer.Backpack
+end
+local tool = exampleTool
+local function Shoot()
+    local bullet = game:GetObjects("rbxassetid://12848374097")[1]
+    task.wait()
+    bullet.Anchored = false
+    bullet.Massless = false
+    local Sound = Instance.new("Sound", game.StarterPlayer)
+    Sound.Volume = 3.5
+    Sound.SoundId = "rbxassetid://5238024665"
+    Sound.PlayOnRemove = true
+    Sound:Destroy()
+    HRP = exampleTool.BulletPart.CFrame * CFrame.Angles(0,math.rad(-90),0)
+    local Attachment = Instance.new("Attachment", bullet)
+    local LV = Instance.new("LinearVelocity", Attachment) -- creating the linear velocity
+    LV.MaxForce = math.huge -- no need to worry about this
+    LV.VectorVelocity = (game:GetService("Players").LocalPlayer:GetMouse().Hit.Position - tool.BulletPart.Position).Unit * 100-- HRP.lookVector * 50 -- change 100 with how fast you want the projectile to go
+    LV.Attachment0 = Attachment --Required Attachment
+    bullet.Parent = game.Workspace
+    bullet.CFrame = tool.BulletPart.CFrame * CFrame.Angles(math.rad(0),math.rad(90),math.rad(90))
+    bullet.Touched:Connect(function(part)
+        local Model = part:FindFirstAncestorWhichIsA("Model")
+        if Model ~= nil and Model:GetAttribute("IsCustomEntity") == true then
+            Model:Destroy()
+        end
+    end)
+    task.wait(0.3)
+    bullet:Destroy()
+    end
+----------------------------------------------- Shooting!
+   
+UIS.InputBegan:Connect(function(input)
+    if tool.Parent == game.Players.LocalPlayer.Character then
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        getgenv().BulletType = "12848374097"
+        Shoot()
+       
+        end
+    end
+end)
+end)
+
+MainSection:NewButton("must have 1 lockpick when clicked", "inf lockpick doesnt work on chests", function()
+    local player = game:GetService("Players").LocalPlayer
+if not player then
+    warn("Code error: LocalPlayer not found. Code will not run.")
+    return
+end
+
+local lockpickingObject = player.Character and player.Character:FindFirstChild("Lockpick")
+if not lockpickingObject or typeof(lockpickingObject) ~= "Instance" then
+    warn("Code error: Lockpicking object not found or wrong data type. Code will not run.")
+    return
+end
+
+-- Destroy unnecessary properties of the lockpicking object.
+local properties = {"UnlockEvent"}
+for _, property in ipairs(properties) do
+    local propertyValue = lockpickingObject[property]
+    if propertyValue and propertyValue.Destroy then
+        propertyValue:Destroy()
+    end
+end
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = Obj.Name .. "evos ",
+    Text = "doors script",
+    Duration = 5
+    })
