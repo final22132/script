@@ -44,3 +44,7 @@ end)
 MainSection:NewButton("inf yield ", "inf yield", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("Build a boat for treasure", " build a boat for treasure", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
+end)
