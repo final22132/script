@@ -12,5 +12,5 @@ end)
 
 
 MainSection:NewButton("Breaking points script", "Breaking points script", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/breaking%20points%20script?token=GHSAT0AAAAAACBHGSRUYRKLSV3EIHDBWJ5CZBUHGJA')()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/breaking%20points%20script?token=GHSAT0AAAAAACBHGSRVG6ZQTIGE44OKF24YZBUHK6Q'))()
 end)
