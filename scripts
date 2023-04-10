@@ -48,3 +48,7 @@ end)
 MainSection:NewButton("Build a boat for treasure", " build a boat for treasure", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
 end)
+
+MainSection:NewButton("Bedwars", " Bedwars" , function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
