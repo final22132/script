@@ -1,0 +1,27 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("lafi", "DarkTheme")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("script 1", " script1", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ColdStep2/Breaking-Point-Funny-Squid-Hax/main/Breaking%20Point%20Funny%20Squid%20Hax",true))()
+end)
+
+MainSection:NewButton("script 2", " script2", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/tkorra/bp-gui/main/main.lua'))()
+end)
+
+MainSection:NewButton("auto farm", " auto farm ", function()
+    getgenv().AutoFarm = true --enables / disables AutoFarm
+getgenv().ServerHop = false --enables / disables server hop, add to autoexec if you enable this.
+loadstring(game:HttpGet('https://raw.githubusercontent.com/2vsh/breakingpoint/main/mainscript.lua'))()
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title =  "evos ",
+    Text = "breaking points script",
+    Duration = 5
+    })
