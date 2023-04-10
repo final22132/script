@@ -32,3 +32,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-frid
         wait(4.5)
         message:Destroy()
 end)
+
+MainSection:NewButton("Epic minigames script", "Epic minigames script", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
+end)
