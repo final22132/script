@@ -9,3 +9,8 @@ local MainSection = Main:NewSection("Main")
 MainSection:NewButton("Doors script", "doors script", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/doors%20script?token=GHSAT0AAAAAACBHGSRVTNVHJ46C7RPLKG7WZBUG2JQ'))()
 end)
+
+
+MainSection:NewButton("Breaking points script", "Breaking points script", function()
+   loadstring(game:HttpGet('raw.githubusercontent.com/final22132/script/main/breaking%20points%20script?token=GHSAT0AAAAAACBHGSRVKW2UTNT3ACRAAPD4ZBUHAKQ'))()
+end)
