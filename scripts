@@ -33,7 +33,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-frid
         message:Destroy()
 end)
 
-MainSection:NewButton("Epic minigames script", "Epic minigames script", function()
+MainSection:NewButton("Epic minigames script", "Epic script", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
 end)
 
@@ -45,12 +45,20 @@ MainSection:NewButton("Build a boat for treasure", " build a boat for treasure",
     loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
 end)
 
-MainSection:NewButton("Bedwars", " Bedwars" , function()
+MainSection:NewButton("Bedwars", " p2w wars" , function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end)
 
 MainSection:NewButton("Ohio", " swag like ohio" , function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/rxn-xyz/Ohio./main/Ohio.lua",true))()
+end)
+
+MainSection:NewButton("Sharkbite2", " sharky2 " , function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Lolboxo/SharkBiteV3/main/SharkBiteV3.1'))()
+end)
+
+MainSection:NewButton("world zero ( KEY )", " it has key sorry" , function()
+    loadstring(game:HttpGet"https://thedragonslayer2.github.io")()
 end)
 
 --LOCAL PLAYER
@@ -82,6 +90,26 @@ local MiscSection = Misc:NewSection("Misc")
 
 MiscSection:NewButton("inf yield ", "inf yield", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MiscSection:NewButton("punch ( only work for some game ) ", " /e punch omg ", function()
+   loadstring(game:HttpGet(('https://pastefy.ga/GvnHVjT5/raw'),true))()
+end)
+
+MiscSection:NewButton("netless for hats ", " will make it not fall ", function()
+   for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(-30,0,0)
+    end)
+    end
+    end
+ 
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Notification";
+        Text = "re execute everytime u reset";
+        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+    Duration = 16;
 end)
 
 --credits
