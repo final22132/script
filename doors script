@@ -256,7 +256,7 @@ end
 end)
 
 game.StarterGui:SetCore("SendNotification", {
-    Title = Obj.Name .. "evos ",
+    Title =  "evos ",
     Text = "doors script",
     Duration = 5
     })
