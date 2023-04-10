@@ -19,7 +19,7 @@ MainSection:NewButton("Flag wars script", "Flag wars script", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/flag%20wars%20script?token=GHSAT0AAAAAACBHGSRUUJB6HP6E3KYGNV74ZBUHS4Q'))()
 end)
 
-MainSection:NewButton("Flag wars script", "Flag wars script", function()
+MainSection:NewButton("Funky friday script", "Funky friday script", function()
    local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
