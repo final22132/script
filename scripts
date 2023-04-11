@@ -16,7 +16,7 @@ MainSection:NewButton("Breaking points script", "Breaking points script", functi
 end)
 
 MainSection:NewButton("Flag wars script", "Flag wars script", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/flag%20wars%20script?token=GHSAT0AAAAAACBHGSRVZPFQ62BBQZ73XR64ZBVEEJA'))()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/flag%20wars%20script'))()
 end)
 
 MainSection:NewButton("Funky friday script", "Funky friday script", function()
