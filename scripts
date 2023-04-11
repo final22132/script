@@ -7,7 +7,7 @@ local MainSection = Main:NewSection("Main")
 
 
 MainSection:NewButton("Doors script", "doors script", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/doors%20script?token=GHSAT0AAAAAACBHGSRVTNVHJ46C7RPLKG7WZBUG2JQ'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/doors%20script?token=GHSAT0AAAAAACBHGSRVRA5ZPY665WOGWF5QZBVEICA'))()
 end)
 
 
