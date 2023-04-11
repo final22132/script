@@ -63,7 +63,7 @@ end)
 
 --LOCAL PLAYER
 local Player = Window:NewTab("Player")
-local PlayerSection = Player:NewSection("THIS MAY GET YOU BANNED USE AT YOUR OWN RISK ☢")
+local PlayerSection = Player:NewSection(" MAY GET YOU BAN USE AT YOUR OWN RISK ")
 
 
 PlayerSection:NewToggle("superhuman", "run faster and jump", function(state)
