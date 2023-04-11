@@ -112,6 +112,9 @@ MiscSection:NewButton("netless for hats ", " will make it not fall ", function()
     Duration = 16;
 end)
 
+MiscSection:NewButton(" fe snake", " turn into snake", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/fe%20snake?token=GHSAT0AAAAAACBHGSRUF757RE7XIRT3XSNEZBU7JFQ'))()
+
 --credits
 local Credits = Window:NewTab("Credits")
 local Credits = Credits:NewSection("nobody idek why i added this")
