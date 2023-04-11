@@ -113,7 +113,7 @@ MiscSection:NewButton("netless for hats ", " will make it not fall ", function()
 end)
 
 MiscSection:NewButton(" fe snake", " turn into snake", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/fe%20snake?token=GHSAT0AAAAAACBHGSRUF757RE7XIRT3XSNEZBU7JFQ'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/fe%20snake'))()
 end)
 
 --credits
