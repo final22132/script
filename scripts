@@ -74,11 +74,11 @@ PlayerSection:NewToggle("superhuman", "run faster and jump", function(state)
 end)
 
 PlayerSection:NewSlider("WalkSpeed", "zoooom", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = true
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
 PlayerSection:NewSlider("JumpPower", "weeeee", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = true
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 
