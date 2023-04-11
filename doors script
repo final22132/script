@@ -68,7 +68,7 @@ MainSection:NewButton("inf yield", "just normal inf yield", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-MainSection:NewButton("noclip press R", "noclip", function()
+MainSection:NewButton("noclip press R(PATCHED)", "noclip", function()
     -- Made by Deivid#5444
 
 _G.Keybind = "R"
