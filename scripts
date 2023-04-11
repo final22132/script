@@ -57,9 +57,6 @@ MainSection:NewButton("Sharkbite2", " sharky2 " , function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Lolboxo/SharkBiteV3/main/SharkBiteV3.1'))()
 end)
 
-MainSection:NewButton("world zero ( KEY )", " it has key sorry" , function()
-    loadstring(game:HttpGet"https://thedragonslayer2.github.io")()
-end)
 
 --LOCAL PLAYER
 local Player = Window:NewTab("Player")
@@ -82,6 +79,20 @@ end)
 
 PlayerSection:NewSlider("JumpPower", "weeeee", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+--Key
+local Key = Window:NewTab("Key")
+local KeySection = Key:NewSection("these scripts has key")
+
+KeySection:NewButton("world zero ( KEY )", " it has key sorry" , function()
+    loadstring(game:HttpGet"https://thedragonslayer2.github.io")()
+end)
+
+KeySection:NewButton("military tycoon ( KEY )", " it has key sorry" , function()
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/thedragonslayer2/Key-System/main/Load.lua")()
+
 end)
 
 --misc
