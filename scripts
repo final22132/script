@@ -143,5 +143,5 @@ local Credits = Credits:NewSection("nobody idek why i added this")
 
 --TOP SECRET
 local TOPSECRET = Window:NewTab("TOP SECRET")
-local TOPSECRET = TOP SECRET:NewSection("99% MOST LIKELY WILL GET U BAN")
+local TOPSECRET = TOPSECRET:NewSection("99% MOST LIKELY WILL GET U BAN")
 
