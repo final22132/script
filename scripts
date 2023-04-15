@@ -127,6 +127,12 @@ MiscSection:NewButton(" fe snake", " turn into snake", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/final22132/script/main/fe%20snake'))()
 end)
 
+MiscSection:NewButton("sword fighting bot press X ", " press X ", function()
+   -- press x to turn on
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
+--credits: https://v3rmillion.net/showthread.php?tid=1197208
+end)
+
 --credits
 local Credits = Window:NewTab("Credits")
 local Credits = Credits:NewSection("nobody idek why i added this")
