@@ -57,6 +57,14 @@ MainSection:NewButton("Sharkbite2", " sharky2 " , function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Lolboxo/SharkBiteV3/main/SharkBiteV3.1'))()
 end)
 
+MainSection:NewButton("3008", " 3008 " , function()
+    loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/scripts/main/3008.lua')()
+end)
+
+MainSection:NewButton("The conqueror 3", " The conqueror 3 " , function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/frickwtcb/tempsTC3/main/TC3NEWSCRIPT-obfuscated.lua'))()
+end)
+
 
 --LOCAL PLAYER
 local Player = Window:NewTab("Player")
