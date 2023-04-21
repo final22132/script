@@ -151,6 +151,6 @@ end)
 
 --credits
 local Credits = Window:NewTab("Credits")
-local Credits = Credits:NewSection("nobody idek why i added this")
+local Credits = Credits:NewSection("captain567kinged my pro friend ")
 
 
